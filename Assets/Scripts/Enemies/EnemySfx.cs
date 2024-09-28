@@ -1,20 +1,21 @@
 using Audio;
 using UnityEngine;
 
+
 namespace Enemies
 {
     [RequireComponent(typeof(Enemy))]
     public class EnemySfx : MonoBehaviour
     {
         [SerializeField] private AudioPlayer audioSourcePrefab;
-        [SerializeField] private RandomContainer<AudioClipData> spawnClips;
-        [SerializeField] private RandomContainer<AudioClipData> explosionClips;
+        [SerializeField] private SoundScriptable spawnClips;
+        [SerializeField] private SoundScriptable explosionClips;
+        [SerializeField] private AudioService AudioCaller;
         private Enemy _enemy;
 
         private void Reset() => FetchComponents();
 
         private void Awake() => FetchComponents();
-    
         private void FetchComponents()
         {
             // "a ??= b" is equivalent to "if(a == null) a = b" 
@@ -23,6 +24,9 @@ namespace Enemies
         
         private void OnEnable()
         {
+
+            AudioCaller = ServiceLocator.Instance.GetService("AudioService") as AudioService;
+
             if (!audioSourcePrefab)
             {
                 Debug.LogError($"{nameof(audioSourcePrefab)} is null!");
@@ -40,12 +44,12 @@ namespace Enemies
 
         private void HandleDeath()
         {
-            PlayRandomClip(explosionClips, audioSourcePrefab);
+            PlayRandomClip(explosionClips.DeathSounds, audioSourcePrefab);
         }
 
         private void HandleSpawn()
         {
-            PlayRandomClip(spawnClips, audioSourcePrefab);
+            PlayRandomClip(spawnClips.SpawnSounds, audioSourcePrefab);
         }
 
         private void PlayRandomClip(RandomContainer<AudioClipData> container, AudioPlayer sourcePrefab)

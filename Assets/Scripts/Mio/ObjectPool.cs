@@ -1,4 +1,5 @@
 using Enemies;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,9 +29,6 @@ public class ObjectPool : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        
-
     }
     //singleton
 
@@ -43,9 +41,6 @@ public class ObjectPool : MonoBehaviour
         public string tag;
         public GameObject prefab;
         public int size;
-
-
-
     }
     //Hacemos la lista en base a Pool
     public List<Pool> pools;
@@ -63,6 +58,7 @@ public class ObjectPool : MonoBehaviour
         {
             //Cola
             Queue<GameObject> objectPool = new Queue<GameObject>();
+            
 
             //quiero que recorra mi lista hasta que se llene
             for (int i = 0; i < pool.size; i++)
@@ -82,7 +78,8 @@ public class ObjectPool : MonoBehaviour
         //Habilitamos objeto activandolo y asignando su posicion
         GameObject objectToSpawn = poolDict[tag].Dequeue();
         objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
+        //Hacemos Warp para que el enemigo no se vaya de su rumbo
+        objectToSpawn.GetComponent<Enemy>().Agent.Warp(position);
         objectToSpawn.transform.rotation = rotation;
 
         //lo encolamos cuando lo dejamos de usar, para que la pool lo reutilize mas tarde
@@ -90,7 +87,4 @@ public class ObjectPool : MonoBehaviour
 
         return objectToSpawn;
     }
-
- 
-
 }

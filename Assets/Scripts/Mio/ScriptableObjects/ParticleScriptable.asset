@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde721aac4a119b44a03c5636d7bff0a, type: 3}
+  m_Name: ParticleScriptable
+  m_EditorClassIdentifier: 
+  particles:
+    candidates:
+    - {fileID: 198004822848242970, guid: c470337125fb7b64c8448bf1427e7fda, type: 3}
+    - {fileID: 198054744853520878, guid: c99a78b09d48aad4cac512b58918aae3, type: 3}
+    - {fileID: 198819086003702248, guid: 27e9fe0da1ae6844cbfaf6f9204684d2, type: 3}

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a644f45418945f04fb309c00552a23ea, type: 3}
+  m_Name: SoundScriptable
+  m_EditorClassIdentifier: 
+  SpawnSounds:
+    candidates:
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: a041e494bc6f28e40a1530463b1d0b96, type: 3}
+      <Group>k__BackingField: {fileID: 5124015694307163796, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: 4cd946977f30c914cad394e2e1d624c8, type: 3}
+      <Group>k__BackingField: {fileID: 5124015694307163796, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: 593bd93a75b657e4283c45303ffe517f, type: 3}
+      <Group>k__BackingField: {fileID: 5124015694307163796, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: 1314beed5103eda4f85401f415b02cfb, type: 3}
+      <Group>k__BackingField: {fileID: 5124015694307163796, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+  DeathSounds:
+    candidates:
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: 42490e6640057ce4db43aba3c86ad38e, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: d223c5577ede66f48a122de33aaf2219, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: e4a8df629f590ba489491460a5240376, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: 08415d06288f85149a280d27136602d2, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 0}
+      <Group>k__BackingField: {fileID: 0}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: f5d846951928f5643aafde117a0bd93b, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: d06d42c76094ab24982da44ea9c2f057, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: 74b5decc344f0eb42aa071c8fb870efe, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: dd639a0db4777e64cbfadfc0fffd2c11, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}
+    - <Loop>k__BackingField: 0
+      <Clip>k__BackingField: {fileID: 8300000, guid: 6b140b8e1c6550f4ba6819afef043294, type: 3}
+      <Group>k__BackingField: {fileID: 5794750874944222309, guid: 10517f487e65f1b499ae9320adbfd570, type: 2}

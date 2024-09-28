@@ -6,9 +6,17 @@ using UnityEngine.AI;
 namespace Enemies
 {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class Enemy : MonoBehaviour, IPrototype
+    public class Enemy : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent agent;
+
+        public NavMeshAgent Agent
+        {
+            get { return agent; }
+            set { agent = value; }
+        }
+
+
         private static Transform townCenter;
 
         public event Action OnSpawn = delegate { };
@@ -91,8 +99,4 @@ namespace Enemies
         }
 
     }
-
-   
-
-
 }
