@@ -7,6 +7,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SoundScriptable", menuName = "ScriptableObjects/SoundScriptable", order = 0)]
 public class SoundScriptable : ScriptableObject
 {
-    [SerializeField] public RandomContainer<AudioClipData> SpawnSounds;
-    [SerializeField] public RandomContainer<AudioClipData> DeathSounds;
+     public RandomContainer<AudioClipData> SpawnSounds;
+     public RandomContainer<AudioClipData> DeathSounds;
 }

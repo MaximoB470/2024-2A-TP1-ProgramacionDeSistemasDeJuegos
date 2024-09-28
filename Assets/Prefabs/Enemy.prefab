@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7321402761329078172}
   - component: {fileID: 7245034872270020510}
   - component: {fileID: 6512775222602955904}
-  - component: {fileID: 5102552170310831788}
-  - component: {fileID: 6527579169009852818}
+  - component: {fileID: 271545823838912958}
+  - component: {fileID: 4689698508189404833}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 7245034872270020510}
---- !u!114 &5102552170310831788
+--- !u!114 &271545823838912958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,8 @@ MonoBehaviour:
   audioSourcePrefab: {fileID: 6237993349618790580, guid: 845c69c687f4a704cb7a7c3b134b133b, type: 3}
   spawnClips: {fileID: 11400000, guid: 4a064c5279df7e748b3fae034c890441, type: 2}
   explosionClips: {fileID: 11400000, guid: 4a064c5279df7e748b3fae034c890441, type: 2}
---- !u!114 &6527579169009852818
+  AudioCaller: {fileID: 0}
+--- !u!114 &4689698508189404833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

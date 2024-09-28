@@ -81,7 +81,6 @@ public class ObjectPool : MonoBehaviour
         //Hacemos Warp para que el enemigo no se vaya de su rumbo
         objectToSpawn.GetComponent<Enemy>().Agent.Warp(position);
         objectToSpawn.transform.rotation = rotation;
-
         //lo encolamos cuando lo dejamos de usar, para que la pool lo reutilize mas tarde
         poolDict[tag].Enqueue(objectToSpawn);
 

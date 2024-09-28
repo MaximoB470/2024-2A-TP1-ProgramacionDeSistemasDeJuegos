@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TownCenter
   - Enemy
+  - TownStructure
   layers:
   - Default
   - TransparentFX

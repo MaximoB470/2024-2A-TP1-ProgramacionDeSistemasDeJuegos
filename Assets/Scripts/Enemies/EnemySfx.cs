@@ -10,11 +10,9 @@ namespace Enemies
         [SerializeField] private AudioPlayer audioSourcePrefab;
         [SerializeField] private SoundScriptable spawnClips;
         [SerializeField] private SoundScriptable explosionClips;
-        [SerializeField] private AudioService AudioCaller;
+        private AudioService audioService;
         private Enemy _enemy;
-
         private void Reset() => FetchComponents();
-
         private void Awake() => FetchComponents();
         private void FetchComponents()
         {
@@ -24,9 +22,7 @@ namespace Enemies
         
         private void OnEnable()
         {
-
-            AudioCaller = ServiceLocator.Instance.GetService("AudioService") as AudioService;
-
+            audioService = ServiceLocator.Instance.GetService("AudioService") as AudioService;
             if (!audioSourcePrefab)
             {
                 Debug.LogError($"{nameof(audioSourcePrefab)} is null!");
@@ -44,7 +40,8 @@ namespace Enemies
 
         private void HandleDeath()
         {
-            PlayRandomClip(explosionClips.DeathSounds, audioSourcePrefab);
+            PlayRandomClip(audioService.DeathFiles(), audioSourcePrefab);
+
         }
 
         private void HandleSpawn()
@@ -65,7 +62,4 @@ namespace Enemies
             return Instantiate(prefab, transform.position, transform.rotation);
         }
     }
-
-
-
 }

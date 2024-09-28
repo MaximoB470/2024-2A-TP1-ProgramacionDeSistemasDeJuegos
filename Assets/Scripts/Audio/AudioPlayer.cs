@@ -8,6 +8,9 @@ namespace Audio
     {
         [SerializeField] private OnFinishAction finishAction;
         private AudioSource _source;
+
+
+
         public AudioSource Source
         {
             get
@@ -30,15 +33,17 @@ namespace Audio
             Source.clip = data.Clip;
             Source.outputAudioMixerGroup = data.Group;
             Source.Play();
-            var clipLength = data.Clip.length;
-            if (finishAction == OnFinishAction.Destroy)
-            {
-                StartCoroutine(DestroySelfIn(clipLength));
-            }
-            else if (finishAction == OnFinishAction.Deactivate)
-            {
-                StartCoroutine(DeactivateIn(clipLength));
-            }
+            //var clipLength = data.Clip.length;
+            //if (finishAction == OnFinishAction.Destroy)
+            //{
+            //    StartCoroutine(DestroySelfIn(clipLength));
+            //}
+            //else if (finishAction == OnFinishAction.Deactivate)
+            //{
+            //    StartCoroutine(DeactivateIn(clipLength));
+            //}
+
+            //profe si borro el lenght me funciona a la perfeccion (pero no elimina los source la escena), se que no tengo que comentar pero porfa corrijame el error 
         }
 
         private IEnumerator DestroySelfIn(float seconds)
