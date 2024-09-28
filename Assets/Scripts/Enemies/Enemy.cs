@@ -6,7 +6,7 @@ using UnityEngine.AI;
 namespace Enemies
 {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class Enemy : MonoBehaviour
+    public class Enemy : MonoBehaviour, IPrototype
     {
         [SerializeField] private NavMeshAgent agent;
         private static Transform townCenter;
@@ -85,5 +85,14 @@ namespace Enemies
         {
             agent.enabled = false;
         }
+        public GameObject Clone(Vector3 Pos, Quaternion rot)
+        {
+            return Instantiate(this.gameObject, Pos, rot);
+        }
+
     }
+
+   
+
+
 }

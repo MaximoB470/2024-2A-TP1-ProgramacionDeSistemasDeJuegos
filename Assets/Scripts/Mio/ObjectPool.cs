@@ -1,3 +1,4 @@
+using Enemies;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ https://www.youtube.com/watch?v=tdSmKaJvCoA
 
 public class ObjectPool : MonoBehaviour
 {
+    [SerializeField] private IPrototype prototype;
+
     //singleton
     public static ObjectPool Instance { get; private set; }
 
@@ -25,6 +28,9 @@ public class ObjectPool : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
+
     }
     //singleton
 
@@ -37,16 +43,17 @@ public class ObjectPool : MonoBehaviour
         public string tag;
         public GameObject prefab;
         public int size;
-    }
 
-  
+
+
+    }
     //Hacemos la lista en base a Pool
     public List<Pool> pools;
 
     //Diccionario de pool para guardar Objetos
     public Dictionary<string, Queue<GameObject>> poolDict;
 
-    private void Start()
+    public void Start()
     {
         //Definimos el diccionario creado, listo para usar
         poolDict = new Dictionary<string, Queue<GameObject>>();
@@ -83,4 +90,7 @@ public class ObjectPool : MonoBehaviour
 
         return objectToSpawn;
     }
+
+ 
+
 }

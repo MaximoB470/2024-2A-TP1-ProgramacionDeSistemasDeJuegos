@@ -10,7 +10,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int spawnsPerPeriod = 10;
     [SerializeField] private float frequency = 30;
     [SerializeField] private float period = 0;
-
     private ObjectPool objectPooler;
 
     private void OnEnable()
@@ -47,4 +46,6 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(period);
         }
     }
+
+   
 }
